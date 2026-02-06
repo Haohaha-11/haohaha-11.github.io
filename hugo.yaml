@@ -1,0 +1,119 @@
+baseURL: "https://yourusername.github.io/"
+languageCode: zh-cn
+title: "学术个人主页"
+theme: PaperMod
+
+# 启用 Git 信息
+enableGitInfo: true
+
+# 允许在 Markdown 中使用 HTML
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: monokai
+
+# 菜单配置
+menu:
+  main:
+    - identifier: blog
+      name: 博文
+      url: /posts/
+      weight: 10
+    - identifier: notes
+      name: 讲义
+      url: /notes/
+      weight: 20
+    - identifier: papers
+      name: 论文
+      url: /papers/
+      weight: 30
+    - identifier: about
+      name: 关于
+      url: /about/
+      weight: 40
+
+# PaperMod 主题参数
+params:
+  env: production
+  description: "学术研究者的个人主页"
+  author: "Your Name"
+  
+  # 启用 Profile Mode
+  profileMode:
+    enabled: true
+    title: "Your Name"
+    subtitle: "博士研究生 | 人工智能 | 计算机科学"
+    imageUrl: "/img/avatar.jpg"
+    imageTitle: "个人头像"
+    imageWidth: 150
+    imageHeight: 150
+    buttons:
+      - name: 博文
+        url: /posts/
+      - name: 讲义
+        url: /notes/
+      - name: 论文
+        url: /papers/
+
+  # 社交链接
+  socialIcons:
+    - name: github
+      url: "https://github.com/yourusername"
+    - name: email
+      url: "mailto:your.email@example.com"
+    - name: googlescholar
+      url: "https://scholar.google.com/citations?user=YOUR_ID"
+    - name: rss
+      url: "/index.xml"
+
+  # 首页信息
+  homeInfoParams:
+    Title: "欢迎来到我的学术主页"
+    Content: "这里分享我的研究成果、学术笔记和技术博客"
+
+  # 启用搜索
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+  # 显示设置
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: true
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: true
+
+  # 资源路径
+  assets:
+    disableHLJS: true
+    disableFingerprinting: false
+
+# 输出格式
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# 分类法
+taxonomies:
+  category: categories
+  tag: tags
+  series: series
