@@ -4,6 +4,9 @@ date: 2024-01-10
 draft: false
 tags: ["机器学习", "深度学习"]
 categories: ["课程讲义"]
+math: true
+showToc: true
+summary: "介绍监督学习、损失函数与模型评估，并附带课程讲义 PDF。"
 ---
 
 ## 课程概述

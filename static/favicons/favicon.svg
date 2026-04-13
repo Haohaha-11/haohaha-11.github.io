@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="faviconTitle">
+  <title id="faviconTitle">Hao Jiang</title>
+  <defs>
+    <linearGradient id="faviconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14b8a6" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#0f172a" />
+  <circle cx="49" cy="15" r="5" fill="#f59e0b" />
+  <text x="50%" y="54%" text-anchor="middle" dominant-baseline="middle" fill="url(#faviconGradient)" font-family="Georgia, 'Times New Roman', serif" font-size="25" font-weight="700">
+    HJ
+  </text>
+</svg>

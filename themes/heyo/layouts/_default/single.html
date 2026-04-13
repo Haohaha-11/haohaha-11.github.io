@@ -1,0 +1,31 @@
+{{ define "main" }}
+<div class="post">
+    {{ with .Params.thumbnail }}
+    <div class="thumbnail" style="box-shadow: var(--box-shadow); height: {{ .height }};">
+        <img src={{ .src | absURL }} style="object-position: {{ .object_position }};" title={{ .alt | default "thumbnail" }} alt={{ .alt | default "thumbnail" }} loading="lazy">
+    </div>
+    {{ end }}
+    <div class="post-title">
+        <h1>{{ .Title }}</h1>
+        {{ if eq .Type "post"}}
+            {{ partial "post-header" . }}
+        {{ end }}
+    </div>
+    <div class="post-content">
+        {{ .Content }}
+    </div>
+    <div class="post-footer">
+        <div class="info">
+            {{ with .Page.Params.Categories }}{{ partial "taxonomy/categories.html" . }}{{ end }}
+            {{ with .Page.Params.Tags }}{{ partial "taxonomy/tags.html" . }}{{ end }}
+        </div>
+        {{ partial "list-badges" . }}
+    </div>
+    {{ if eq .Type "post"}}
+        {{ if .Site.Config.Services.Disqus.Shortname }}
+        <h2>{{ i18n "comments" }}</h2>
+            {{ template "_internal/disqus.html" . }}
+        {{ end }}
+    {{ end }}
+</div>
+{{ end }}

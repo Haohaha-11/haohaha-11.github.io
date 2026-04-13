@@ -1,0 +1,15 @@
+<header class="page-top">
+    <a class="site-brand" href="/">{{ site.Params.title }}</a>
+    <nav class="top-nav" aria-label="Primary">
+        <ul class="nav" id="navMenu">
+            {{ $currentPage := . }}
+            {{ range .Site.Menus.main }}
+                {{ $isCurrent := or (eq (.URL | relLangURL) $currentPage.RelPermalink) ($currentPage.IsMenuCurrent "main" .) }}
+                <li><a {{ if $isCurrent }}class="current"{{ end }} href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
+            {{ end }}
+        </ul>
+    </nav>
+    <a class="theme-switch" title="Switch Theme">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</header>

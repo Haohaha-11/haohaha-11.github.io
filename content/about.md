@@ -40,10 +40,8 @@ summary: "个人简介与研究方向"
 
 ## 联系方式
 
-- **Email**: your.email@example.com
-- **GitHub**: [github.com/yourusername](https://github.com/yourusername)
-- **Google Scholar**: [个人主页链接](#)
+- **Email**: haolalala24@gmail.com
 
 ---
 
-欢迎通过邮件或 GitHub 与我交流！
+欢迎通过邮件交流！

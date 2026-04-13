@@ -4,6 +4,7 @@ on:
   # 在推送到默认分支时运行
   push:
     branches:
+      - master
       - main
   
   # 允许手动触发
@@ -43,7 +44,6 @@ jobs:
       - name: 检出代码
         uses: actions/checkout@v4
         with:
-          submodules: recursive
           fetch-depth: 0
       
       - name: 配置 Pages

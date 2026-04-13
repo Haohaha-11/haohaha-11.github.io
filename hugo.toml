@@ -1,0 +1,91 @@
+baseURL = "/"
+languageCode = "zh-cn"
+title = "Hao Jiang's Page"
+theme = "heyo"
+defaultContentLanguage = "zh-cn"
+summarylength = 100
+enableEmoji = true
+enableRobotsTXT = true
+enableGitInfo = true
+
+[pagination]
+disableAliases = false
+pagerSize = 10
+path = ''
+
+[params.author]
+name = "Hao Jiang"
+email = "haolalala24@gmail.com"
+
+[params]
+title = "Hao Jiang"
+description = "UESTC 大二在读 | 人工智能"
+profilePicture = "img/avatar.jpg"
+favicon = "favicons/favicon.svg"
+displayMode = "auto"
+customCss = ["css/custom.css"]
+customJs = []
+mainSections = ["posts", "notes", "papers"]
+
+[params.math]
+enable = false
+use = "mathjax"
+
+[params.sketch]
+enable = false
+displayOptions = false
+use = "Boids"
+
+[[params.socialIcons]]
+icon = "fas fa-envelope"
+title = "Email"
+url = "mailto:haolalala24@gmail.com"
+
+[[menu.main]]
+name = "首页"
+pageRef = "/"
+weight = 1
+
+[[menu.main]]
+name = "博文"
+pageRef = "/posts/"
+weight = 2
+
+[[menu.main]]
+name = "讲义"
+pageRef = "/notes/"
+weight = 3
+
+[[menu.main]]
+name = "论文"
+pageRef = "/papers/"
+weight = 4
+
+[[menu.main]]
+name = "关于"
+pageRef = "/about/"
+weight = 5
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.highlight]
+anchorLineNos = false
+codeFences = true
+guessSyntax = false
+lineNumbersInTable = true
+noClasses = true
+style = "dracula"
+tabWidth = 4
+
+[markup.tableOfContents]
+endLevel = 6
+startLevel = 1
+
+[outputs]
+home = ["HTML", "RSS"]
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
