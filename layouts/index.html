@@ -1,17 +1,12 @@
 {{ define "main" }}
     <section class="site-profile">
-        <img class="site-profile__avatar" src="{{ .Site.Params.profilePicture | absURL }}" alt="profile picture">
         <div class="site-profile__info">
-            <div class="site-profile__name">
-                Hao Jiang&nbsp;&nbsp;<span class="site-profile__name-zh">姜浩</span>
-            </div>
+            <h2 class="site-profile__heading">About Me</h2>
+            <p class="site-profile__desc">{{ .Site.Params.description }}</p>
             <p class="site-profile__meta">University of Electronic Science and Technology of China</p>
-            <p class="site-profile__meta">{{ .Site.Params.description }}</p>
-            {{ with .Site.Params.author.email }}
-            <p class="site-profile__meta">Email: <a href="mailto:{{ . }}">{{ . }}</a></p>
-            {{ end }}
-            <p class="site-profile__quote">站在能分割世界的桥。</p>
+            <p class="site-profile__quote">► <span class="quote-en">Standing on the bridge that can divide the world.</span>&emsp;站在能分割世界的桥。</p>
         </div>
+        <img class="site-profile__avatar" src="{{ .Site.Params.profilePicture | absURL }}" alt="profile picture">
     </section>
 
     {{ if .Content }}
@@ -21,7 +16,7 @@
     {{ end }}
 
     <section class="home-posts">
-        <h2 class="home-posts__title">近期内容</h2>
+        <h2 class="home-posts__title">Selected Work</h2>
 
         {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
         {{ range $index, $page := $paginator.Pages }}

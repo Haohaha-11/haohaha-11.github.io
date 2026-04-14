@@ -41,6 +41,7 @@ html[data-theme='dark'] {
 html {
     background: var(--bg-color);
     font-family: Arial, "FandolKai-Regular", sans-serif;
+    font-size: 17px;
 }
 
 body {
@@ -113,10 +114,10 @@ pre code {
 
 /* ── Navbar ── */
 .page-top {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    gap: 1rem;
-    padding: 0.85rem 0;
+    padding: 0.8rem 0;
     border-bottom: 1px solid var(--page-line);
     position: sticky;
     top: 0;
@@ -124,22 +125,37 @@ pre code {
     background: var(--bg-color);
 }
 
-.site-brand {
-    font-size: 1rem;
-    font-weight: 600;
+/* Name block (left) */
+.site-info {
+    justify-self: start;
+    line-height: 1.2;
+}
+
+.site-name {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
     color: var(--heading-color);
-    white-space: nowrap;
-    flex-shrink: 0;
     text-decoration: none;
+    letter-spacing: -0.01em;
 }
 
-.site-brand:hover {
-    text-decoration: none;
+.site-name:hover {
     color: var(--a-color);
+    text-decoration: none;
 }
 
+.site-name-zh {
+    margin: 0;
+    font-size: 1.7rem;
+    color: var(--muted-ink);
+    font-family: "FandolKai-Regular", "楷体", serif;
+    letter-spacing: 0.1em;
+}
+
+/* Nav links (center) */
 .top-nav {
-    flex: 1;
+    justify-self: center;
 }
 
 .top-nav .nav {
@@ -148,7 +164,6 @@ pre code {
     margin: 0;
     padding: 0;
     gap: 0;
-    justify-content: flex-end;
 }
 
 .top-nav .nav li {
@@ -158,32 +173,103 @@ pre code {
 
 .top-nav .nav a {
     display: block;
-    padding: 0.25rem 0.7rem;
-    font-size: 0.9rem;
+    padding: 0.28rem 0.8rem;
+    font-size: 1rem;
     color: var(--body-color);
     text-decoration: none;
-    transition: color 150ms;
+    border-radius: 0.3rem;
+    transition: color 150ms, background 150ms;
 }
 
-.top-nav .nav a:hover,
+.top-nav .nav a:hover {
+    color: var(--a-color);
+    background: var(--accent-soft);
+    text-decoration: none;
+}
+
 .top-nav .nav a.current {
     color: var(--a-color);
+    font-weight: 600;
+}
+
+/* Right block: social icons + theme toggle */
+.navbar-right {
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 0.15rem;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.05rem;
+    color: var(--muted-ink);
+    border-radius: 0.3rem;
     text-decoration: none;
+    transition: color 150ms, background 150ms;
+}
+
+.social-icons a:hover {
+    color: var(--a-color);
+    background: var(--accent-soft);
+    text-decoration: none;
+}
+
+/* 小红书 icon */
+.icon-xhs {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.2rem;
+    height: 1.2rem;
+    background: #ff2442;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 0.6rem;
+    font-weight: 700;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0;
+}
+
+/* OpenReview icon */
+.icon-or {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.2rem;
+    height: 1.2rem;
+    background: #1a73e8;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 0.58rem;
+    font-weight: 700;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0;
 }
 
 .theme-switch {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 2.2rem;
-    height: 2.2rem;
+    width: 2rem;
+    height: 2rem;
     border: 1px solid var(--page-line);
     border-radius: 50%;
     color: var(--muted-ink);
-    flex-shrink: 0;
     cursor: pointer;
     transition: color 150ms, border-color 150ms;
     text-decoration: none;
+    font-size: 0.85rem;
 }
 
 .theme-switch:hover {
@@ -194,11 +280,11 @@ pre code {
 
 /* ── Homepage profile section ── */
 .site-profile {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto;
     gap: 2.5rem;
-    align-items: flex-start;
+    align-items: start;
     padding: 2.5rem 0 2rem;
-    border-bottom: 1px solid var(--page-line);
 }
 
 .site-profile__avatar {
@@ -206,13 +292,20 @@ pre code {
     height: auto;
     flex-shrink: 0;
     display: block;
+    border-radius: 4px;
 }
 
 .site-profile__info {
     display: flex;
     flex-direction: column;
     gap: 0.45rem;
-    padding-top: 0.3rem;
+}
+
+.site-profile__heading {
+    margin: 0 0 0.6rem;
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: var(--heading-color);
 }
 
 .site-profile__name {
@@ -229,32 +322,79 @@ pre code {
     font-weight: 400;
 }
 
+.site-profile__desc {
+    margin: 0 0 0.4rem;
+    font-size: 1.1rem;
+    color: var(--body-color);
+    line-height: 1.85;
+}
+
 .site-profile__meta {
     margin: 0;
-    font-size: 0.95rem;
-    color: var(--body-color);
+    font-size: 1.05rem;
+    color: var(--muted-ink);
     line-height: 1.6;
 }
 
 .site-profile__quote {
     margin: 0.6rem 0 0;
-    font-style: italic;
-    font-size: 0.95rem;
+    font-size: 1.15rem;
+    line-height: 1.72;
     color: var(--muted-ink);
+    font-family: "Cormorant Garamond", "FandolKai-Regular", "楷体", KaiTi, serif;
+    font-style: normal;
+    letter-spacing: 0.02em;
 }
 
-/* ── Home bio ── */
+.quote-en {
+    font-style: italic;
+}
+
+/* ── Home bio / CV ── */
 .home-bio {
-    padding: 1.8rem 0 1.5rem;
+    padding: 1.5rem 0 2rem;
     border-bottom: 1px solid var(--page-line);
-    max-width: 72ch;
+    max-width: 80ch;
 }
 
 .home-bio p {
-    margin: 0;
-    font-size: 1rem;
+    margin: 0 0 0.8rem;
+    font-size: 1.1rem;
     color: var(--body-color);
     line-height: 1.8;
+}
+
+.home-bio h2 {
+    margin: 2rem 0 0.8rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--heading-color);
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--heading-color);
+}
+
+.home-bio h2:first-child {
+    margin-top: 0.5rem;
+}
+
+.home-bio hr {
+    margin: 1.8rem 0 0;
+    border: none;
+    border-top: 1px solid var(--page-line);
+}
+
+.home-bio strong {
+    color: var(--heading-color);
+}
+
+.home-bio ul {
+    margin: 0.3rem 0 0.8rem;
+    padding-left: 1.4rem;
+}
+
+.home-bio ul li {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
 }
 
 /* ── Home posts section ── */
@@ -527,12 +667,13 @@ pre code {
 /* ── Mobile ── */
 @media (max-width: 640px) {
     .site-profile {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         gap: 1.2rem;
         padding: 1.5rem 0;
     }
 
     .site-profile__avatar {
+        order: -1;
         width: 7rem;
     }
 
