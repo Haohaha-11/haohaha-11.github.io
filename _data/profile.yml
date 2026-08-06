@@ -1,0 +1,37 @@
+primary_name: "Hao Jiang"
+secondary_name: "江浩"
+navbar_name: "Hao Jiang's Homepage"
+
+positions:
+  - "B.Sc. Student in Fundamental Science (Mathematics and Physics), UESTC — Yingcai Honors College"
+
+email: "3043708741@qq.com"
+gscholar: zTwEfkoAAAAJ
+github: Haohaha-11
+xiaohongshu: 5c540c05000000001a00c1e2
+# resume:            # add later (assets/cv/...)
+# twitter / linkedin / orcid / zhihu: add later
+
+short_bio: >-
+  I am a second-year undergraduate in Mathematics and Physics at the University
+  of Electronic Science and Technology of China (UESTC), Yingcai Honors College.
+  My research spans computer vision, large language models, and medical AI —
+  including remote-sensing image fusion, LLM and VLM safety (jailbreak attacks),
+  test-time training, pathology whole-slide image (WSI) analysis and compression,
+  and visual latent memory for medical imaging.
+
+show_portrait: true
+portrait_url: assets/images/photos/avatar.jpg
+portrait_caption: "Hao Jiang"
+
+education:
+- name: University of Electronic Science and Technology of China (UESTC)
+  position: B.Sc. in Fundamental Science (Mathematics and Physics), Yingcai Honors College
+  date: Sep. 2024 - Jun. 2028
+
+awards:
+- name: First-Class Outstanding Student Scholarship
+  date: 2025
+
+footer_text: >-
+  Copyright © 2026 Hao Jiang. All Rights Reserved.
