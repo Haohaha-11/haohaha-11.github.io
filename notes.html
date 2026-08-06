@@ -6,15 +6,30 @@ navbar_name: Notes
 <div class="row">
   <div class="col-12 col-lg-10">
     <h2 class="pt-4"><i class="fas fa-book"></i> Notes</h2>
-    <div class="my-0 p-0 bg-white shadow-sm rounded-sm">
-      {% assign notes = site.notes | sort: "date" | reverse %}
-      {% for note in notes %}
-      <div class="p-3 border-bottom border-gray">
-        <a href="{{ note.url | relative_url }}"><h5 class="my-1">{{ note.title }}</h5></a>
-        <p class="small text-muted my-1">{{ note.date | date: "%B %d, %Y" }}</p>
-        {% if note.summary %}<p class="my-1">{{ note.summary }}</p>{% endif %}
+    <p class="text-muted">Study notes on papers, blogs, and books.</p>
+
+    {% assign groups = site.notes | group_by: "category" %}
+    {% for g in groups %}
+      <h4 class="pt-3">
+        {% case g.name %}
+          {% when "papers" %}Papers
+          {% when "blog" %}Blog
+          {% when "books" %}Books
+          {% when "" %}Other
+          {% else %}{{ g.name | capitalize }}
+        {% endcase %}
+      </h4>
+      <div class="my-2 p-0 bg-white shadow-sm rounded-sm">
+        {% assign items = g.items | sort: "date" | reverse %}
+        {% for note in items %}
+        <div class="p-3 border-bottom border-gray">
+          <a href="{{ note.url | relative_url }}"><h5 class="my-1">{{ note.title }}</h5></a>
+          <p class="small text-muted my-1">{{ note.date | date: "%B %d, %Y" }}{% if note.source %} &middot; {{ note.source }}{% endif %}</p>
+          {% if note.summary %}<p class="my-1">{{ note.summary }}</p>{% endif %}
+          {% if note.link %}<a class="small" href="{{ note.link }}" target="_blank" rel="noopener">Original &#8599;</a>{% endif %}
+        </div>
+        {% endfor %}
       </div>
-      {% endfor %}
-    </div>
+    {% endfor %}
   </div>
 </div>

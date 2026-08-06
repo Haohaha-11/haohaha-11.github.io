@@ -13,7 +13,7 @@ collections:
     output: false
   notes:
     output: true
-    permalink: /notes/:name/
+    permalink: /notes/:path/
 
 defaults:
   - scope:
