@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/global.css">
     <!-- ICON -->
-    <link rel="shortcut icon" href="assets/images/etc/bitbug_favicon.ico" />
+    <link rel="shortcut icon" href="assets/images/etc/favicon.svg" />
     <!-- Quote CSS-->
     <style>
         blockquote {
@@ -46,12 +46,6 @@
             right: 10px;
             bottom: 10px;
         }
-        .speak-btn {
-            border: none;
-            background: none;
-            font-size: 24px;
-            cursor: pointer;
-          }
     </style>
 </head>
 
@@ -83,20 +77,5 @@
       });
     </script> -->
 
-    <script>
-    document.querySelectorAll('.speak-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const name = btn.dataset.name; // 从 data-name 取名字
-        if (!('speechSynthesis' in window)) {
-          alert('当前浏览器不支持语音朗读');
-          return;
-        }
-        window.speechSynthesis.cancel();
-        const utter = new SpeechSynthesisUtterance(name);
-        utter.lang = 'zh-CN';
-        window.speechSynthesis.speak(utter);
-      });
-    });
-  </script>
 </body>
 </html>
