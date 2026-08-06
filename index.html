@@ -294,7 +294,7 @@ num_selected: 10
 					point1 = new Point(startx, starty),
 					point2 = new Point(startx, starty),
 					point3 = null,
-					color = Math.round(random(0, 360)),
+					color = random([210, 320]),
 					delay = 0;
 				while (true) {
 					if (stop <= 0) break;
@@ -423,15 +423,15 @@ num_selected: 10
 		return Factory
 	});
 	new Ribbons({
-		colorSaturation: "60%",
-		colorBrightness: "50%",
-		colorAlpha: 0.5,
-		colorCycleSpeed: 5,
+		colorSaturation: "45%",
+		colorBrightness: "70%",
+		colorAlpha: 0.26,
+		colorCycleSpeed: 0,
 		verticalPosition: "random",
-		horizontalSpeed: 200,
+		horizontalSpeed: 120,
 		ribbonCount: 3,
 		strokeSize: 0,
-		parallaxAmount: -0.2,
+		parallaxAmount: -0.15,
 		animateSections: true
 	});
 </script>
