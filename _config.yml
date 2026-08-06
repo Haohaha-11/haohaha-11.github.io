@@ -1,0 +1,24 @@
+title: "Hao Jiang"
+baseurl: ""
+url: ""
+
+markdown: kramdown
+plugins:
+  - jekyll-email-protect
+
+collections:
+  publications:
+    output: false
+  news:
+    output: false
+  notes:
+    output: true
+    permalink: /notes/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: notes
+    values:
+      layout: note
+      navbar_name: Notes
