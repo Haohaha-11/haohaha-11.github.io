@@ -13,3 +13,12 @@ resources/
 # OS
 .DS_Store
 Thumbs.db
+
+# Local Jekyll preview artifacts
+_site/
+.jekyll-cache/
+.jekyll-metadata
+tmp/
+
+# Publication PDFs are hosted on haoceanlab.cn
+assets/papers/
