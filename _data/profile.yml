@@ -2,22 +2,30 @@ primary_name: "Hao Jiang"
 secondary_name: "江浩"
 navbar_name: "Hao Jiang's Homepage"
 
-positions:
-  - "Third-year B.Sc. student in Fundamental Science of Mathematics and Physics (AI), UESTC — Yingcai Honors College"
-
-email: "3043708741@qq.com"
+email: "Haolalala24@outlook.com"
 gscholar: NeR_ViIAAAAJ
 github: Haohaha-11
 xiaohongshu: 5c540c05000000001a00c1e2
-resume: https://haoceanlab.cn/uploads/hao-jiang-resume.pdf
+# 指向简历仓库里的英文版 PDF，简历更新后主页无需再改
+resume: https://github.com/Haohaha-11/Resume-Haojiang/blob/main/main_en.pdf
 # twitter / linkedin / orcid / zhihu: add later
 
+# 术语用 <span class="term">，核心命题用 <span class="term term-key">（样式见 assets/css/global.css）
 short_bio: >-
-  I am a third-year undergraduate in Fundamental Science of Mathematics and Physics (AI) at UESTC,
-  Yingcai Honors College. In my sophomore year, I studied image processing with Prof. Liangjian Deng
-  and worked on computational pathology and image compression. I later moved toward large language
-  models, exploring LLM test-time learning and multimodal latent memory. I am currently a research
-  intern with Prof. Shanghang Zhang at Peking University, studying world-model memory and spatial memory.
+  I am a third-year undergraduate in Fundamental Science of Mathematics and Physics (AI) at
+  <a href="https://en.uestc.edu.cn/" target="_blank">UESTC</a>, Yingcai Honors College. I began by learning <span class="term">computational pathology</span> and
+  <span class="term">image compression</span> with
+  <a href="https://liangjiandeng.github.io/" target="_blank">Prof. Liang-Jian Deng</a>, where
+  <span class="term">AI for medicine</span> first gave me a feel for the idea that
+  <span class="term term-key">compression is intelligence</span>. I then became a research intern with
+  <a href="https://cs.pku.edu.cn/info/1233/2060.htm" target="_blank">Prof. Shanghang Zhang</a> at
+  Peking University, learning <span class="term">multimodal large language models</span> and studying
+  <span class="term">thinking with latent visual memory</span>, which deepened my understanding of how
+  memory, a product of compression, is formed, what form it takes, and how it is accessed. Now I
+  continue to learn about <span class="term">memory for world models</span> and
+  <span class="term">spatial memory</span>, and keep exploring the thesis that
+  <span class="term term-key">compression is intelligence</span> through world models and
+  <span class="term">AI infrastructure</span>.
 
 show_portrait: true
 portrait_url: assets/images/photos/avatar.jpg
@@ -29,8 +37,12 @@ education:
   date: Sep. 2024 - Jun. 2028
 
 awards:
+- name: "First Prize, UESTC (iFLYTEK Cup) 1st AI Agent Creativity Competition"
+  date: 2026
 - name: "Meritorious Winner (M Prize), MCM/ICM (Problem D)"
-  date: 2025
+  date: 2026
+- name: First-Class Outstanding Student Scholarship
+  date: 2026
 - name: First-Class Outstanding Student Scholarship
   date: 2025
 

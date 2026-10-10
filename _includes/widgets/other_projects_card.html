@@ -1,0 +1,12 @@
+<div class="my-3 bg-white shadow-sm rounded-sm">
+    <h6 class="p-3 mb-0 border-bottom border-gray"><i class="fas fa-flask"></i> Other Projects</h6>
+    <ul class="list-unstyled px-3 py-2 mb-0">
+        {% for project in site.data.research.other %}
+        <li class="other-project">
+            <span class="other-project-name">{{ project.name }}</span>
+            <span class="text-muted">· {{ project.topic }}</span>
+            <div class="small text-muted">{{ project.text }}</div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>

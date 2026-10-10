@@ -24,9 +24,10 @@ abstract: >-
   complementary latent memories: a static question-conditioned Global memory
   and a dynamic Local memory selected according to the current reasoning state.
   A reinforcement-learning access policy decides when to continue reasoning or
-  retrieve visual evidence. ReMAP improves all four multi-image benchmarks,
-  exceeds prior results on MuirBench and MIMIC by 8.38 and 14.84 points, and
-  reduces visual tokens by 51.0--76.8% on shared benchmarks.
+  retrieve visual evidence. ReMAP outperforms prior visual-memory methods on all
+  four multi-image benchmarks, exceeds prior results on MuirBench and MIMIC by
+  8.38 and 14.84 points, and reduces visual tokens by 51.0–76.8% on shared
+  benchmarks.
 links:
   arXiv: https://arxiv.org/abs/2610.05097
   PDF: https://arxiv.org/pdf/2610.05097

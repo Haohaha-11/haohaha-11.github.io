@@ -59,3 +59,105 @@ img.lazy {
     font-family: Courier, monospace;
 }
 
+
+/* ---------- Research card: reflective intro + threads ---------- */
+.research-intro {
+    font-style: italic;
+    color: #495057;
+    border-left: 3px solid #004098;
+    padding-left: .75rem;
+}
+
+.research-thread {
+    margin-bottom: .9rem;
+}
+
+.research-thread-head {
+    margin-bottom: .15rem;
+}
+
+.research-tag {
+    display: inline-block;
+    font-size: .75rem;
+    font-weight: 600;
+    color: #004098;
+    background: rgba(0, 64, 152, .08);
+    border-radius: 999px;
+    padding: .1rem .55rem;
+    margin-right: .35rem;
+    vertical-align: 1px;
+}
+
+.research-question {
+    font-weight: 700;
+}
+
+.research-text {
+    font-size: .95rem;
+}
+
+/* ---------- Other projects card ---------- */
+.other-project {
+    padding: .35rem 0;
+}
+
+.other-project + .other-project {
+    border-top: 1px solid rgba(0, 0, 0, .06);
+}
+
+.other-project-name {
+    font-weight: 700;
+}
+
+/* ---------- Key terms in the bio and reflection ---------- */
+.term {
+    color: #004098;
+}
+
+.term-key {
+    font-weight: 700;
+}
+
+/* ---------- Contact icons under the portrait ---------- */
+.social-icons {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: .8rem;
+}
+
+.social-icons-start {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    color: #495057;
+    font-size: 1.2rem;
+    transition: transform .15s ease, color .15s ease;
+}
+
+.social-icon:hover,
+.social-icon:focus {
+    color: #004098;
+    transform: translateY(-1px);
+    text-decoration: none;
+}
+
+.social-icon img {
+    width: 19px;
+    height: 19px;
+    filter: grayscale(1);
+    opacity: .7;
+}
+
+.social-icon:hover img,
+.social-icon:focus img {
+    filter: none;
+    opacity: 1;
+}

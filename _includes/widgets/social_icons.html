@@ -1,0 +1,44 @@
+{% comment %}
+  Row of round contact/social icons. Used under the portrait (desktop) and under
+  the bio (mobile, where the portrait column is hidden).
+  include.align: "start" to left-align (default: centered).
+{% endcomment %}
+{% assign p = site.data.profile %}
+<div class="social-icons{% if include.align == 'start' %} social-icons-start{% endif %}">
+  {% if p.email %}
+  <a class="social-icon" href="mailto:{{ p.email | encode_email }}" data-toggle="tooltip" data-placement="bottom" title="{{ p.email | replace: '@', '(at)' }}" aria-label="Email"><i class="fas fa-envelope"></i></a>
+  {% endif %}
+  {% if p.gscholar %}
+  <a class="social-icon" target="_blank" href="https://scholar.google.com/citations?user={{ p.gscholar }}&hl=en" data-toggle="tooltip" data-placement="bottom" title="Google Scholar" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+  {% endif %}
+  {% if p.sscholar %}
+  <a class="social-icon" target="_blank" href="https://www.semanticscholar.org/author/{{ p.sscholar }}" data-toggle="tooltip" data-placement="bottom" title="Semantic Scholar" aria-label="Semantic Scholar"><i class="fas fa-book"></i></a>
+  {% endif %}
+  {% if p.github %}
+  <a class="social-icon" target="_blank" href="https://github.com/{{ p.github }}" data-toggle="tooltip" data-placement="bottom" title="GitHub" aria-label="GitHub"><i class="fab fa-github"></i></a>
+  {% endif %}
+  {% if p.twitter %}
+  <a class="social-icon" target="_blank" href="https://twitter.com/{{ p.twitter }}" data-toggle="tooltip" data-placement="bottom" title="Twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+  {% endif %}
+  {% if p.zhihu %}
+  <a class="social-icon" target="_blank" href="https://www.zhihu.com/people/{{ p.zhihu }}" data-toggle="tooltip" data-placement="bottom" title="ZhiHu" aria-label="ZhiHu"><i class="fab fa-zhihu"></i></a>
+  {% endif %}
+  {% if p.linkedin %}
+  <a class="social-icon" target="_blank" href="https://www.linkedin.com/in/{{ p.linkedin }}" data-toggle="tooltip" data-placement="bottom" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+  {% endif %}
+  {% if p.orcid %}
+  <a class="social-icon" target="_blank" href="https://orcid.org/{{ p.orcid }}" data-toggle="tooltip" data-placement="bottom" title="ORCID" aria-label="ORCID"><i class="fab fa-orcid"></i></a>
+  {% endif %}
+  {% if p.cv_link %}
+  <a class="social-icon" target="_blank" href="{{ p.cv_link }}" data-toggle="tooltip" data-placement="bottom" title="CV" aria-label="CV"><i class="fas fa-file-alt"></i></a>
+  {% endif %}
+  {% if p.resume %}
+  <a class="social-icon" target="_blank" href="{{ p.resume }}" data-toggle="tooltip" data-placement="bottom" title="Resume" aria-label="Resume"><i class="fas fa-file-pdf"></i></a>
+  {% endif %}
+  {% if p.wechat_qrcode %}
+  <a class="social-icon" href="#" data-toggle="modal" data-target="#modal-wechat" title="WeChat" aria-label="WeChat"><i class="fab fa-weixin"></i></a>
+  {% endif %}
+  {% if p.xiaohongshu %}
+  <a class="social-icon" target="_blank" href="https://www.xiaohongshu.com/user/profile/{{ p.xiaohongshu }}" data-toggle="tooltip" data-placement="bottom" title="RedNote" aria-label="RedNote"><img src="assets/images/rednote.png" alt="RedNote"></a>
+  {% endif %}
+</div>

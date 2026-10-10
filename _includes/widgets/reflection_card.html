@@ -1,0 +1,19 @@
+{% assign research = site.data.research %}
+<div class="my-3 bg-white shadow-sm rounded-sm">
+    <h6 class="p-3 mb-0 border-bottom border-gray"><i class="fas fa-lightbulb"></i> Reflection</h6>
+    <div class="px-3 pt-3 pb-2">
+        <p class="research-intro">{{ research.intro }}</p>
+        {% for thread in research.threads %}
+        <div class="research-thread">
+            <div class="research-thread-head">
+                <span class="research-tag">{{ thread.tag }}</span>
+                <span class="research-question">{{ thread.question }}</span>
+            </div>
+            <p class="research-text mb-0">
+                {{ thread.text }}
+                {% for link in thread.links %}<a target="_blank" href="{{ link.url }}">[{{ link.name }}]</a> {% endfor %}
+            </p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
