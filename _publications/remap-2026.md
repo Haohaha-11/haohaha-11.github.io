@@ -19,8 +19,6 @@ authors:
   - "Mengyu Wang"
   - "Leo Anthony Celi"
   - "Shanghang Zhang"
-pub_pre: "Submitted to "
-pub: "ICLR 2027"
 abstract: >-
   ReMAP restores visual grounding during long multimodal reasoning with two
   complementary latent memories: a static question-conditioned Global memory
