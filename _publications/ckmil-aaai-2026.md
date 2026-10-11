@@ -3,6 +3,7 @@ title: "CKMIL: Cascaded Key-Instance Attention Multiple Instance Learning for Hi
 date: 2026-01-01
 submission_date: 2025-07-25
 selected: true
+order: 2
 cover: /assets/images/publications/ckmil-aaai-2026.png
 authors:
   - "Hao Jiang"
@@ -13,8 +14,8 @@ authors:
   - "Hao Chen"
   - "Cheng Jin"
   - "Liang-Jian Deng"
-pub_pre: "Submitted to "
-pub: "AAAI-26"
+status: submitted
+venue: "AAAI-26"
 abstract: >-
   A cascaded key-instance attention framework for whole slide image analysis
   that preserves sparse diagnostic signals while efficiently modeling global

@@ -1,13 +1,13 @@
 ---
 layout: default
-title : Publications
-navbar_name: Publications
+title : Works
+navbar_name: Works
 body_attr: >-
   data-spy="scroll" data-target="#navbar-year" data-offset="100"
 ---
 
 <blockquote>
-    Selected publications and manuscripts. More on my <a href="https://scholar.google.com/citations?user=NeR_ViIAAAAJ&hl=en">🔗 Google Scholar</a>.
+    Selected papers and manuscripts. More on my <a href="https://scholar.google.com/citations?user=NeR_ViIAAAAJ&hl=en">🔗 Google Scholar</a>.
 </blockquote>
 
 {% assign pubs_by_year = site.publications | sort: "date" | reverse | group_by_exp: "item", "item.date | date: '%Y'" %}
@@ -18,7 +18,8 @@ body_attr: >-
         {% assign num_papers = year.items | size %}
         <h2 class="pt-4" id="year-{{ year.name }}">{{ year.name }}</h2>
         <div class="my-0 p-0 bg-white shadow-sm rounded-sm">
-            {% for item in year.items %}
+            {% assign items_in_year = year.items | sort: "order", "last" %}
+            {% for item in items_in_year %}
                 {% include widgets/publication_item.html item=item %}
             {% endfor %}
         </div>

@@ -1,0 +1,11 @@
+{%- comment -%}
+  Venue/status line of a work. With `status` (accepted | preprint | submitted)
+  and `venue`, renders a colored badge; otherwise falls back to the legacy
+  pub_pre/pub/pub_post fields.
+{%- endcomment -%}
+{%- assign item = include.item -%}
+{%- if item.status -%}
+<p class="mt-1 mb-1 small"><span class="pub-badge pub-badge-{{ item.status }}">{% if item.status == "submitted" %}Submitted to {% endif %}{{ item.venue }}</span></p>
+{%- elsif item.pub -%}
+<p class="mt-0 mb-0 small">{{ item.pub_pre }}<i>{{ item.pub }}</i>{{ item.pub_post }} {{ item.pub_date }} {{ item.pub_last }}</p>
+{%- endif -%}

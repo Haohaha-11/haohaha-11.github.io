@@ -1,86 +1,60 @@
-# Homepage "Reflection" card: one reflective question, then the threads under it.
+# Homepage "Reflection" card: one paragraph on how my view of compression grew
+# (abstraction → selection → utilization → intelligence).
 # Also feeds the "Current Learning" and "Other Projects" cards below it.
-intro: >-
-  Across projects I keep coming back to one question: what should a model keep
-  from what it sees, and how should it get that back when it needs it? To me,
-  this is a concrete way into a broader idea I keep thinking about:
-  <span class="term term-key">compression is intelligence</span>.
+reflection: >-
+  Looking back, my projects keep circling one question: what should a model keep
+  from what it sees, and how should it get that back when it needs it? I see this
+  as a concrete handle on <span class="term term-key">compression is intelligence</span>.
+  In my first year, I learned the basics of image processing, and watching
+  <span class="term">convolutional networks</span> turn images, layer by layer,
+  into <span class="term">abstract features</span> made me realize for the first
+  time that neural networks are, at heart, a form of compression. I then studied
+  pathology image analysis and compression with
+  <a href="https://liangjiandeng.github.io/" target="_blank">Prof. Liang-Jian Deng</a>,
+  where <span class="term">attention mechanisms</span> showed me that compression
+  is not only about making information smaller but about deciding what to keep,
+  lifting my understanding of compression to the level of
+  <span class="term">selection</span>. Working on
+  <span class="term">thinking with latent visual memory</span>, I had to select
+  effectively, compress effectively, and use the compressed memory effectively at
+  the same time, which took my sense of compression a step further. Recently I
+  joined the <span class="term">spatial memory</span> and
+  <span class="term">memory world model</span> (AI infra) projects. Studying
+  <span class="term">abstract cognitive maps</span> in cognitive science gave me a
+  new understanding of compression in <span class="term">biological intelligence</span>,
+  and on the AI infrastructure side, <span class="term">Kimi K3's KDA</span>
+  (Kimi Delta Attention) compresses an ever-growing context into a
+  <span class="term">fixed-size linear state</span>, while
+  <span class="term">DeepSeek</span> compresses at the level of attention, the KV
+  cache, and layers at once. All of this made me feel more deeply that
+  <span class="term term-key">compression is intelligence</span>. It shows me a
+  <span class="term">path beyond scale</span>: not only making models bigger, but
+  teaching them to compress better. I like this view, and I want to keep exploring
+  and learning along it.
 
-threads:
-  - tag: MLLM reasoning
-    question: What should a reasoning model remember?
-    text: >-
-      The longer multimodal models reason, the less they look at the image.
-      ReMAP analyzes visual memory along curation, organization, and access,
-      then keeps compact latent memories that the model learns to recall when
-      its reasoning needs them.
-    links:
-      - name: arXiv
-        url: https://arxiv.org/abs/2610.05097
-      - name: Code
-        url: https://github.com/Haohaha-11/ReMAP
-  - tag: AI for pathology
-    question: What does a diagnosis need to see?
-    text: >-
-      A gigapixel slide is mostly redundant; its diagnostic evidence sits in a
-      few patches. CKMIL keeps those key instances instead of letting global
-      attention dilute them. My ongoing work on pathology image compression asks
-      how much of a slide diagnosis actually needs, and finds that some
-      morphological tasks do not depend on image reconstruction.
-    links:
-      - name: CKMIL
-        url: https://haoceanlab.cn/pdfs/ckmil-aaai-26.pdf
-  - tag: Along the way
-    question: MLLM safety
-    text: >-
-      I also worked on jailbreak attacks against vision-language models: PIS
-      builds scenario-grounded typographic prompts with cooperating agents, and
-      StructAttack shows that a model's own compositional reasoning can
-      reassemble a harmful request split into benign pieces.
-    links:
-      - name: PIS
-        url: https://haoceanlab.cn/pdfs/persuasion-in-scene-cvpr-2026.pdf
-      - name: StructAttack
-        url: https://arxiv.org/abs/2603.07590
-
-# "Current Learning" card, shown right after Reflection.
+# "Current Learning" card, shown right after Reflection: a short list.
+# name = topic; note (optional, may hold links) = where I'm learning it from.
 current_learning:
-  - name: World models and spatial memory
-    text: >-
-      At Peking University, I joined the memory world model and spatial memory
-      projects, carrying the question above over to world models.
+  - name: World engines and memory world models
+    note: >-
+      with <a href="https://cs.pku.edu.cn/info/1233/2060.htm" target="_blank">Prof. Shanghang Zhang</a>
+  - name: Spatial memory
+    note: >-
+      Fei-Fei Li's line of work, e.g.
+      <a href="https://arxiv.org/abs/2602.07055" target="_blank">Theory of Space</a>
   - name: AI infrastructure
-    text: >-
-      Learning the systems that large-model training and inference run on.
-  - name: Compression is intelligence
-    text: >-
-      Continuing to study and think about this thesis, the idea behind the
-      reflection above.
+    note: >-
+      technical reports from
+      <a href="https://huggingface.co/deepseek-ai" target="_blank">DeepSeek</a>,
+      <a href="https://huggingface.co/moonshotai" target="_blank">Kimi</a>, and
+      <a href="https://huggingface.co/Qwen" target="_blank">Qwen</a>
+  - name: The position of language in human–AI interaction
 
-# Shorter projects listed in the "Other Projects" card (no venues or status).
+# "Other" card at the bottom of the homepage: short paragraphs, one per entry.
 other:
-  - name: SPLIT
-    topic: Long-context test-time training
-    text: >-
-      Writing context into weights and reading evidence back behave as two
-      different capabilities that live in different layers; SPLIT trains them
-      through separate pathways.
-  - name: GAPs
-    topic: Blind diffusion posterior sampling
-    text: >-
-      Passing simulation-based calibration does not mean a sampler recovered the
-      parameters: in high dimensions, a calibrated noise-scale posterior can
-      carry almost no information, which is recoverable through the conditional
-      posterior covariance.
-  - name: QWan
-    topic: World–action models for robotics
-    text: >-
-      Learning actionable world representations from off-expert robot
-      trajectories: off-expert data supervises future-video prediction but not
-      the policy's actions.
-  - name: SpikeMem
-    topic: Agent memory
-    text: >-
-      An agent memory built from spiking-circuit motifs (coincidence gating,
-      conduction delays, winner-take-all inhibition) that picks the current
-      version of changing facts in multi-hop question answering.
+  - >-
+    I have also spent some time learning <span class="term">online learning</span>,
+    <span class="term">unified models</span>, and <span class="term">agent memory</span>.
+    Always happy to chat~
+  - >-
+    I love hip-hop culture and rap.

@@ -18,11 +18,12 @@ num_selected: 10
 {% endif %}
 
 {% if site.data.display.homepage.show_selected_publications %}
-    {% assign pubs = site.publications | sort: "date" | reverse | where: "selected", true %}
+    {% comment %} 按贡献排序：front matter 里的 order 越小越靠前，没有 order 的排最后 {% endcomment %}
+    {% assign pubs = site.publications | where: "selected", true | sort: "order", "last" %}
     {% 
         include widgets/publication_card.html 
         publications=pubs
-        title='<i class="fas fa-star"></i> Selected Publications'
+        title='<i class="fas fa-star"></i> Selected Works'
     %}
 {% endif %}
 

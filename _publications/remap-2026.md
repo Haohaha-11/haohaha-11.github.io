@@ -3,6 +3,9 @@ title: "ReMAP: Restoring the Perceptual Cycle with Reasoning-Time Latent Visual 
 date: 2026-10-04
 submission_date: 2026-10-04
 selected: true
+order: 1
+status: preprint
+venue: "arXiv 2026"
 cover: /assets/images/publications/remap-2026.png
 authors:
   - "Hao Jiang"

@@ -3,16 +3,17 @@ title: "Persuasion in Scene: A Multi-Agent Typographic Jailbreak Crew against La
 date: 2026-01-01
 submission_date: 2025-12-09
 selected: true
+order: 3
 cover: /assets/images/publications/persuasion-in-scene-cvpr-2026.png
 authors:
-  - "Linyi Jiang"
-  - "Hao Jiang"
+  - "Linyi Jiang*"
+  - "Hao Jiang*"
   - "Chenxi Li"
   - "Yaosong Du"
   - "Dake Shen"
   - "et al."
-pub_pre: "Submitted to "
-pub: "CVPR 2026"
+status: submitted
+venue: "CVPR 2026"
 abstract: >-
   A multi-agent typographic jailbreak framework that coordinates PROMPTER,
   PAINTER, and GUIDER teams to construct scenario-grounded visual-text prompts

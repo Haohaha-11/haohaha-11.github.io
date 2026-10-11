@@ -1,13 +1,47 @@
+{% comment %}
+  Experience | Honors & Awards side by side. An experience item can list several
+  `roles` (title + date) under one institution; items without `roles` fall back
+  to the single dept/position/date layout.
+{% endcomment %}
 <div class="row mt-3">
     <div class="col">
         <div class="card border-0 shadow-sm bg-white">
             <div class="card-body p-4">
 
                 <div class="row">
+                    {% if site.data.profile.experience %}
+                    <div class="col-md-6">
+                        <div class="mx-2 my-1">
+                            <h6 class="section-heading">Experience</h6>
+                            <ul class="list-unstyled mb-1">
+                                {% for item in site.data.profile.experience %}
+                                <li class="media mb-2">
+                                    {% if item.logo %}<img src="{{ item.logo }}" alt="{{ item.name }}" style="width: 18px;" class="mr-1 mt-1">{% endif %}
+                                    <div class="media-body">
+                                        <p class="my-0">{{ item.name }}</p>
+                                        {% if item.roles %}
+                                        {% for role in item.roles %}
+                                        <p class="small my-0 d-flex experience-role">
+                                            <span>{{ role.title }}</span>
+                                            <em class="ml-auto pl-3 no-break">{{ role.date }}</em>
+                                        </p>
+                                        {% endfor %}
+                                        {% else %}
+                                        <p class="small my-0">{{ item.dept }}</p>
+                                        <p class="small my-0">{{ item.position }} <em class="float-right">{{ item.date }}</em></p>
+                                        {% endif %}
+                                    </div>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    {% endif %}
+
                     {% if site.data.profile.education %}
                     <div class="col-md-6">
                         <div class="mx-2 my-1">
-                            <h6>Education</h6>
+                            <h6 class="section-heading">Education</h6>
                             <ul class="list-unstyled mb-1">
                                 {% for item in site.data.profile.education %}
                                 <li class="media mb-1">
@@ -24,34 +58,14 @@
                     </div>
                     {% endif %}
 
-
                     {% if site.data.profile.awards %}
-                    <div class="col-md-6">
+                    <!-- 奖项栏在宽屏下相对左侧 Experience 竖直居中 -->
+                    <div class="col-md-6 align-self-md-center">
                         <div class="mx-2 my-1">
-                            <h6>Honors & Awards</h6>
+                            <h6 class="section-heading">Honors & Awards</h6>
                             <ul class="list small pl-3 mb-1">
                                 {% for item in site.data.profile.awards %}
-                                <li>{{ item.name }} <em class="float-right">{{ item.date }}</em></li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                    </div>
-                    {% endif %}
-
-                    {% if site.data.profile.experience %}
-                    <div class="col-md-6">
-                        <div class="mx-2 my-1">
-                            <h6>Experience</h6>
-                            <ul class="list-unstyled mb-1">
-                                {% for item in site.data.profile.experience %}
-                                <li class="media mb-1">
-                                    {% if item.logo %}<img src="{{ item.logo }}" alt="{{ item.name }}" style="width: 18px;" class="mr-1 mt-1">{% endif %}
-                                    <div class="media-body">
-                                        <p class="my-0">{{ item.name }}</p>
-                                        <p class="small my-0">{{ item.dept }}</p>
-                                        <p class="small my-0">{{ item.position }} <em class="float-right">{{ item.date }}</em></p>
-                                    </div>
-                                </li>
+                                <li><div class="d-flex"><span>{{ item.name }}</span><em class="ml-auto pl-3 no-break">{{ item.date }}</em></div></li>
                                 {% endfor %}
                             </ul>
                         </div>
@@ -61,7 +75,7 @@
                     {% if site.data.profile.service %}
                     <div class="col-md-6">
                         <div class="mx-2 my-1">
-                            <h6>Service</h6>
+                            <h6 class="section-heading">Service</h6>
                             <ul class="list small pl-3 mb-1">
                                 {% for item in site.data.profile.service %}
                                 <li>{{ item.name }}</li>
@@ -70,7 +84,7 @@
                         </div>
                     </div>
                     {% endif %}
-                    
+
                 </div>
 
             </div>

@@ -31,10 +31,23 @@ show_portrait: true
 portrait_url: assets/images/photos/avatar.jpg
 portrait_caption: "Hao Jiang"
 
-education:
+# Experience 栏（左）与 Honors & Awards 栏（右）并列；本科学历并入 UESTC 条目。
+# 每个机构下用 roles 列出多段经历（最近的在前）。
+experience:
+- name: Peking University, School of Computer Science
+  roles:
+  - title: >-
+      Research Intern with
+      <a href="https://cs.pku.edu.cn/info/1233/2060.htm" target="_blank">Prof. Shanghang Zhang</a>
+    date: Apr. 2026 - Present
 - name: University of Electronic Science and Technology of China (UESTC)
-  position: B.Sc. in Fundamental Science (Mathematics and Physics), Yingcai Honors College
-  date: Sep. 2024 - Jun. 2028
+  roles:
+  - title: >-
+      Researcher with
+      <a href="https://liangjiandeng.github.io/" target="_blank">Prof. Liang-Jian Deng</a>
+    date: Mar. 2025 - Present
+  - title: B.Sc., Yingcai Honors College (Mathematics &amp; Physics, AI)
+    date: Sep. 2024 - Jun. 2028
 
 awards:
 - name: "First Prize, UESTC (iFLYTEK Cup) 1st AI Agent Creativity Competition"

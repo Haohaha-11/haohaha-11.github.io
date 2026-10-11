@@ -60,52 +60,24 @@ img.lazy {
 }
 
 
-/* ---------- Research card: reflective intro + threads ---------- */
-.research-intro {
-    font-style: italic;
-    color: #495057;
+/* ---------- Reflection card: one paragraph with a blue rule ---------- */
+.reflection-text {
+    color: #343a40;
+    line-height: 1.7;
     border-left: 3px solid #004098;
-    padding-left: .75rem;
+    padding-left: .9rem;
 }
 
-.research-thread {
-    margin-bottom: .9rem;
+/* ---------- Current Learning card: short bulleted list ---------- */
+.current-learning {
+    padding: .6rem 1rem .6rem 2.2rem;
 }
 
-.research-thread-head {
-    margin-bottom: .15rem;
+.current-learning li {
+    padding: .15rem 0;
 }
 
-.research-tag {
-    display: inline-block;
-    font-size: .75rem;
-    font-weight: 600;
-    color: #004098;
-    background: rgba(0, 64, 152, .08);
-    border-radius: 999px;
-    padding: .1rem .55rem;
-    margin-right: .35rem;
-    vertical-align: 1px;
-}
-
-.research-question {
-    font-weight: 700;
-}
-
-.research-text {
-    font-size: .95rem;
-}
-
-/* ---------- Other projects card ---------- */
-.other-project {
-    padding: .35rem 0;
-}
-
-.other-project + .other-project {
-    border-top: 1px solid rgba(0, 0, 0, .06);
-}
-
-.other-project-name {
+.learning-topic {
     font-weight: 700;
 }
 
@@ -160,4 +132,33 @@ img.lazy {
 .social-icon:focus img {
     filter: none;
     opacity: 1;
+}
+
+/* ---------- Experience | Honors & Awards card ---------- */
+.section-heading {
+    color: #004098;
+}
+
+/* ---------- Venue / status badges on works ---------- */
+.pub-badge {
+    display: inline-block;
+    font-size: .75rem;
+    font-weight: 700;
+    border-radius: 999px;
+    padding: .1rem .6rem;
+}
+
+.pub-badge-accepted {
+    background: #004098;
+    color: #fff;
+}
+
+.pub-badge-preprint {
+    background: rgba(0, 64, 152, .08);
+    color: #004098;
+}
+
+.pub-badge-submitted {
+    background: #e9ecef;
+    color: #495057;
 }

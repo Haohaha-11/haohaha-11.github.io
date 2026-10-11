@@ -1,7 +1,7 @@
 pages:
 - name: Home
   url: ./
-- name: Publications
+- name: Works
   url: publications
 - name: Notes
   url: notes
